@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Cadence</title>
+<meta name="description" content="What Cadence collects, what it does not, and how to delete everything.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <a href="index.html"><img src="logo.png" alt="Cadence" class="logo"></a>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated: 15 October 2026</p>
+  <p class="lede">Cadence notices when you go to the gym so you don't have to
+  log it. This policy says what that means for your data, and describes what
+  the app actually does rather than what a template says.</p>
+
+  <h2>The short version</h2>
+  <ul>
+    <li>Your visits are <strong>timestamps, not places</strong>. Cadence
+    records that a visit happened and how long it lasted. It never stores
+    where you were.</li>
+    <li>The only location Cadence keeps is <strong>the gym you chose</strong>.</li>
+    <li>There is <strong>no analytics, no advertising and no tracking</strong>
+    of any kind, and no third-party software collecting anything in the
+    background.</li>
+    <li>Cadence never records what you did at the gym — no sets, reps, weights
+    or calories. It only knows you showed up.</li>
+  </ul>
+
+  <h2>What Cadence stores</h2>
+  <h3>On your phone</h3>
+  <ul>
+    <li>Your plan: how many times a week, which days, your usual time.</li>
+    <li>Your gym: its name, address and coordinates, and the radius around it.</li>
+    <li>Your visits: a start time, an end time, a duration, and whether the
+    visit was detected automatically. <strong>No coordinates are stored with a
+    visit.</strong></li>
+    <li>Which notifications were sent and whether you opened them, used to
+    judge whether the nudges are worth sending.</li>
+  </ul>
+
+  <h3>On our server</h3>
+  <p>So your history survives a lost phone, the above is also stored in a
+  database hosted by Supabase, linked to an account identifier — along with
+  your email address if you signed up with email. If you used Sign in with
+  Apple or Google, we receive whatever that service gives us, typically an
+  email address and an account identifier.</p>
+  <p>Every install is given an anonymous account identifier so backup works
+  from the first visit. It is not linked to you personally unless you choose
+  to sign in.</p>
+
+  <h2>How Cadence uses location</h2>
+  <p>Cadence asks for <strong>Always</strong> location access. This is the
+  heart of the app and the reason it needs no manual check-in.</p>
+  <p>What that permission actually does: Cadence registers a circle around
+  your gym with iOS or Android, and the operating system tells the app when
+  you enter or leave it. <strong>Cadence does not follow you around.</strong>
+  It does not track your position, record where you go, or build a history of
+  your movements. It receives two events — arrived, left — and keeps the
+  times.</p>
+  <p>Your phone's current position is read in one other place: to centre the
+  map on the home screen. That position is held in memory while the screen is
+  open, and is never stored or transmitted.</p>
+  <p>If you decline Always access, visits cannot be detected automatically.</p>
+
+  <h2>Who else sees your data</h2>
+  <ul>
+    <li><strong>Supabase</strong> hosts the database holding your account and
+    synced history.</li>
+    <li><strong>Google Places</strong> receives the text you type when
+    searching for your gym, so it can suggest matches. Only the search text is
+    sent — no identifier, no location.</li>
+    <li><strong>Apple</strong> or <strong>Google</strong>, if you choose to
+    sign in with them.</li>
+  </ul>
+  <p>Nobody else. Your data is not sold, shared or used for advertising, and
+  nothing is handed to data brokers or analytics providers.</p>
+
+  <h2>Deleting everything</h2>
+  <p>Open the account screen and choose <strong>Delete account</strong>. This
+  removes your account and all of its data from the server, and clears the
+  visits and plan stored on your phone. It is immediate and cannot be
+  undone.</p>
+  <p>Deleting the app without deleting your account removes the local copy but
+  leaves the server copy in place; delete the account first if you want both
+  gone.</p>
+
+  <h2>Children</h2>
+  <p>Cadence is not directed at children and does not knowingly collect data
+  from anyone under 13.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes in a way that affects what is collected, the date
+  at the top will change and the app will say so before the change takes
+  effect.</p>
+
+  <h2>Contact</h2>
+  <p>Questions, or want your data removed by hand:
+  <a href="mailto:mackmillar@gmail.com">mackmillar@gmail.com</a>.</p>
+
+  <hr class="rule">
+  <footer><a href="index.html">Cadence</a></footer>
+</div>
+</body>
+</html>
