@@ -7,7 +7,7 @@
 <meta name="description" content="No logging, no sets, no reps, no calories. Cadence notices when you get to the gym and counts it.">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="Cadence — showing up is the whole battle">
-<meta property="og:description" content="Cadence notices when you get to the gym and counts it. That is the entire app.">
+<meta property="og:description" content="Nothing to log, nothing to tap. Cadence notices when you’re at the gym and quietly helps you make a habit of going.">
 <meta property="og:image" content="logo.png">
 <link rel="icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,22 +22,32 @@
   <nav>
     <a href="#how">How it works</a>
     <a href="#privacy">Privacy</a>
-    <a class="pill" href="#get">Get the app</a>
+    <a class="pill" href="#get" data-magnet>Get the app</a>
   </nav>
 </header>
 
 <main>
   <!-- Hero -->
   <section class="hero">
-    <h1>Showing up is<br>the whole battle.</h1>
-    <p class="lede">Cadence notices when you get to the gym and counts it. <br class="br-wide">That is the entire app.</p>
-    <a class="store" href="#get" aria-label="Coming soon to the App Store">
+    <div class="particles" aria-hidden="true">
+      <span class="pt" data-depth="0.6" style="left:9%;top:20%"><i class="p-dot amber"></i></span>
+      <span class="pt" data-depth="1.1" style="right:13%;top:12%"><i class="p-dot purple"></i></span>
+      <span class="pt" data-depth="1.4" style="left:27%;top:7%"><i class="p-dot amber tiny"></i></span>
+      <span class="pt" data-depth="1.2" style="right:23%;top:36%"><i class="p-ring"></i></span>
+      <span class="pt chip-pt" data-depth="0.8" style="left:12%;top:52%"><i class="p-chip went">✓</i></span>
+      <span class="pt chip-pt" data-depth="0.5" style="right:10%;top:50%"><i class="p-chip planned">T</i></span>
+      <span class="pt" data-depth="0.3" style="left:5%;top:76%"><i class="p-disc soft"></i></span>
+      <span class="pt" data-depth="0.22" style="right:4%;top:70%"><i class="p-disc pale"></i></span>
+    </div>
+    <h1 class="intro-title"><span class="line"><span>Showing up is</span></span><span class="line"><span>the whole battle.</span></span></h1>
+    <p class="lede intro">Nothing to log, nothing to tap. Cadence notices when you’re at the gym and quietly helps you make a habit of going.</p>
+    <a class="store intro" href="#get" aria-label="Coming soon to the App Store" data-magnet>
       <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.9-1.1-2.9-4.2zM13.9 5.2c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg>
       Coming soon to the App Store
     </a>
 
-    <div class="stage">
-      <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span><span class="dot d4"></span>
+    <div class="stage intro">
+      <div class="backcard" aria-hidden="true"><span>12</span><b>WEEK STREAK</b></div>
       <div class="phone" role="img" aria-label="The Cadence home screen: 2 of 3 visits this week">
         <div class="screen">
           <div class="notch"></div>
@@ -124,7 +134,7 @@
     <img class="mark reveal" src="logo.png" alt="" width="72" height="72">
     <h2 class="reveal">Turn up.<br>Cadence counts it.</h2>
     <p class="reveal">Free, always. Cadence Plus adds more gyms and four more voices.</p>
-    <span class="store reveal">
+    <span class="store reveal" data-magnet>
       <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.9-1.1-2.9-4.2zM13.9 5.2c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg>
       Coming soon to the App Store
     </span>
@@ -154,22 +164,81 @@
       h.appendChild(col);
     }
   })();
-  // Fade sections in as they arrive; skipped entirely for reduced motion.
-  // A plain scroll check, not IntersectionObserver: it must never leave the hero hidden.
-  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  // Motion. Everything below is skipped for reduced motion, and the page is
+  // complete without it: the CSS only hides things once .motion is set here.
+  (function () {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var root = document.documentElement;
+    var fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+    root.classList.add('motion');
+    setTimeout(function () { root.classList.add('loaded'); }, 40);
+
+    // Heat map columns fill in left to right once the tile arrives.
+    [].forEach.call(document.querySelectorAll('.heat div'), function (col, i) {
+      col.style.transitionDelay = (0.25 + i * 0.04) + 's';
+    });
+
+    // Sections arrive as they scroll in. A plain scroll check rather than
+    // IntersectionObserver, so nothing is ever left waiting on an observer.
     var pending = [].slice.call(document.querySelectorAll('.reveal'));
+    var ring = document.querySelector('.ring-fill'), stage = document.querySelector('.stage'), ringDone = false;
     var sweep = function () {
       pending = pending.filter(function (el) {
-        if (el.getBoundingClientRect().top < innerHeight * 0.92) { el.classList.add('in'); return false; }
+        if (el.getBoundingClientRect().top < innerHeight * 0.9) { el.classList.add('in'); return false; }
         return true;
       });
-      if (!pending.length) removeEventListener('scroll', sweep);
+      // The ring fills to 2 of 3 the first time the phone is in view. Its
+      // resting state in the markup is already full, so this only adds the sweep.
+      if (!ringDone && ring && ring.animate && stage.getBoundingClientRect().top < innerHeight * 0.75) {
+        ringDone = true;
+        ring.animate([{ strokeDashoffset: 493.2 }, { strokeDashoffset: 164.4 }],
+          { duration: 1600, delay: 250, easing: 'cubic-bezier(0.2, 0.7, 0.2, 1)', fill: 'backwards' });
+      }
     };
-    document.documentElement.classList.add('motion');
-    setTimeout(sweep, 60);
+    // Run it on load and on anchor jumps too: landing on /#privacy can scroll
+    // the page without a scroll event, which would leave that section blank.
+    setTimeout(sweep, 60); setTimeout(sweep, 400);
+    addEventListener('load', sweep);
+    addEventListener('hashchange', sweep);
     addEventListener('scroll', sweep, { passive: true });
     addEventListener('resize', sweep);
-  }
+
+    // Depth: particles drift at their own speed as the page scrolls and lean
+    // a little towards the cursor; the phone rises over the headline and the
+    // card behind it straightens. Eased, and only computed while moving.
+    var layers = [].slice.call(document.querySelectorAll('[data-depth]'));
+    var phone = document.querySelector('.phone'), card = document.querySelector('.backcard');
+    var mx = 0, my = 0, cx = 0, cy = 0, sy = scrollY, ty = scrollY, running = false;
+    var frame = function () {
+      cx += (mx - cx) * 0.06; cy += (my - cy) * 0.06; sy += (ty - sy) * 0.12;
+      var y = Math.min(sy, innerHeight * 1.4);
+      layers.forEach(function (el) {
+        var d = +el.dataset.depth;
+        el.style.transform = 'translate3d(' + (cx * d * 14).toFixed(2) + 'px,' + (cy * d * 14 - y * d * 0.35).toFixed(2) + 'px,0)';
+      });
+      var p = Math.min(y / (innerHeight * 0.9), 1);
+      if (phone) phone.style.transform = 'translate3d(0,' + (-p * 56).toFixed(2) + 'px,0)';
+      if (card) card.style.transform = 'translate3d(' + (-p * 24).toFixed(2) + 'px,' + (-p * 20).toFixed(2) + 'px,0) rotate(' + (-13 + p * 7).toFixed(2) + 'deg)';
+      if (Math.abs(mx - cx) + Math.abs(my - cy) + Math.abs(ty - sy) > 0.05) requestAnimationFrame(frame);
+      else running = false;
+    };
+    var kick = function () { if (!running) { running = true; requestAnimationFrame(frame); } };
+    addEventListener('scroll', function () { ty = scrollY; kick(); }, { passive: true });
+    if (fine) addEventListener('mousemove', function (e) {
+      mx = e.clientX / innerWidth - 0.5; my = e.clientY / innerHeight - 0.5; kick();
+    }, { passive: true });
+    kick();
+
+    // Buttons lean towards the cursor a few pixels, then settle back.
+    if (fine) [].forEach.call(document.querySelectorAll('[data-magnet]'), function (el) {
+      el.addEventListener('mousemove', function (e) {
+        var r = el.getBoundingClientRect();
+        var dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
+        el.style.transform = 'translate(' + (dx * 0.18).toFixed(1) + 'px,' + (dy * 0.28).toFixed(1) + 'px)';
+      });
+      el.addEventListener('mouseleave', function () { el.style.transform = ''; });
+    });
+  })();
 </script>
 </body>
 </html>
