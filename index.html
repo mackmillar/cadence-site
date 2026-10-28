@@ -54,8 +54,8 @@
           <div class="banner" aria-hidden="true">
             <img src="logo.png" alt="">
             <div class="banner-text">
-              <p class="banner-head"><b>That’s you set</b><time>now</time></p>
-              <p>We’ll nudge on gym days and cheer when you make it. Change it any time in Plan.</p>
+              <p class="banner-head"><b>Your gym buddy’s here</b><time>now</time></p>
+              <p>We’ll nudge you on gym days and help you lock in. Nothing to log.</p>
             </div>
           </div>
           <div class="ring">
@@ -226,7 +226,7 @@
       });
       var p = Math.min(y / (innerHeight * 0.9), 1);
       if (phone) phone.style.transform = 'translate3d(0,' + (-p * 56).toFixed(2) + 'px,0)';
-      // Partway up, the welcome notification drops in like an iOS banner,
+      // Partway up, a welcome notification drops in like an iOS banner,
       // stays a few seconds and slides away. Scrolling back to the top re-arms it.
       if (banner) {
         if (!bannerShown && p > 0.3) {
