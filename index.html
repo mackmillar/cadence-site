@@ -51,6 +51,13 @@
       <div class="phone" role="img" aria-label="The Cadence home screen: 2 of 3 visits this week">
         <div class="screen">
           <div class="notch"></div>
+          <div class="banner" aria-hidden="true">
+            <img src="logo.png" alt="">
+            <div class="banner-text">
+              <p class="banner-head"><b>That’s you set</b><time>now</time></p>
+              <p>We’ll nudge on gym days and cheer when you make it. Change it any time in Plan.</p>
+            </div>
+          </div>
           <div class="ring">
             <svg width="168" height="168" viewBox="0 0 168 168" aria-hidden="true">
               <circle cx="84" cy="84" r="78.5" fill="none" stroke="#e9e6f0" stroke-width="11"/>
@@ -208,6 +215,7 @@
     // card behind it straightens. Eased, and only computed while moving.
     var layers = [].slice.call(document.querySelectorAll('[data-depth]'));
     var phone = document.querySelector('.phone'), card = document.querySelector('.backcard');
+    var banner = document.querySelector('.banner'), bannerShown = false, bannerTimer;
     var mx = 0, my = 0, cx = 0, cy = 0, sy = scrollY, ty = scrollY, running = false;
     var frame = function () {
       cx += (mx - cx) * 0.06; cy += (my - cy) * 0.06; sy += (ty - sy) * 0.12;
@@ -218,6 +226,16 @@
       });
       var p = Math.min(y / (innerHeight * 0.9), 1);
       if (phone) phone.style.transform = 'translate3d(0,' + (-p * 56).toFixed(2) + 'px,0)';
+      // Partway up, the welcome notification drops in like an iOS banner,
+      // stays a few seconds and slides away. Scrolling back to the top re-arms it.
+      if (banner) {
+        if (!bannerShown && p > 0.3) {
+          bannerShown = true; banner.classList.add('show');
+          bannerTimer = setTimeout(function () { banner.classList.remove('show'); }, 4200);
+        } else if (bannerShown && p < 0.05) {
+          bannerShown = false; clearTimeout(bannerTimer); banner.classList.remove('show');
+        }
+      }
       if (card) card.style.transform = 'translate3d(' + (-p * 24).toFixed(2) + 'px,' + (-p * 20).toFixed(2) + 'px,0) rotate(' + (-13 + p * 7).toFixed(2) + 'deg)';
       if (Math.abs(mx - cx) + Math.abs(my - cy) + Math.abs(ty - sy) > 0.05) requestAnimationFrame(frame);
       else running = false;
