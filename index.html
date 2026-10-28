@@ -220,11 +220,17 @@
 
     // Sections arrive as they scroll in. A plain scroll check rather than
     // IntersectionObserver, so nothing is ever left waiting on an observer.
+    // 01's week is planned one day at a time, Monday first, once the tile is in.
+    var planWeek = function (el) {
+      [].forEach.call(el.querySelectorAll('.chips span'), function (chip, i) {
+        setTimeout(function () { chip.classList.add('set'); }, 350 + i * 150);
+      });
+    };
     var pending = [].slice.call(document.querySelectorAll('.reveal'));
     var ring = document.querySelector('.ring-fill'), stage = document.querySelector('.stage'), ringDone = false;
     var sweep = function () {
       pending = pending.filter(function (el) {
-        if (el.getBoundingClientRect().top < innerHeight * 0.9) { el.classList.add('in'); return false; }
+        if (el.getBoundingClientRect().top < innerHeight * 0.9) { el.classList.add('in'); planWeek(el); return false; }
         return true;
       });
       // The ring fills to 2 of 3 the first time the phone is in view. Its

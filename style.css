@@ -161,7 +161,7 @@ section { max-width: var(--page); margin: 0 auto; padding: 0 var(--gutter); }
 
 /* Bento */
 .bento { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-three); }
-.tile { background: var(--heatEmpty); border-radius: 32px; padding: 40px; min-height: 380px; display: flex; flex-direction: column; }
+.tile { background: var(--bg); border: 1.5px solid var(--line); border-radius: 32px; padding: 40px; min-height: 380px; display: flex; flex-direction: column; }
 .tile h3, .fact h3 { font-size: 28px; line-height: 1.15; font-weight: 800; letter-spacing: -0.6px; margin-top: var(--space-two); }
 .tile p, .fact p { font-size: 16px; line-height: 1.55; color: var(--inkSoft); margin-top: var(--space-two); max-width: 340px; }
 .tile .step { font-size: 13px; font-weight: 800; letter-spacing: 1px; color: var(--purple); margin: 0; }
@@ -184,7 +184,7 @@ section { max-width: var(--page); margin: 0 auto; padding: 0 var(--gutter); }
 .tile.wide { grid-column: 1 / -1; min-height: 0; flex-direction: row; align-items: center; justify-content: space-between; gap: var(--space-five); }
 .heat { display: flex; gap: 5px; }
 .heat div { display: flex; flex-direction: column; gap: 5px; }
-.heat i { width: 22px; height: 22px; border-radius: 5px; background: var(--bg); }
+.heat i { width: 22px; height: 22px; border-radius: 5px; background: var(--heatEmpty); }
 .heat i.one { background: var(--heatOne); }
 .heat i.many { background: var(--purple); }
 .heat i.future { background: transparent; }
@@ -260,12 +260,9 @@ section { max-width: var(--page); margin: 0 auto; padding: 0 var(--gutter); }
 .motion .facts .fact:nth-child(3) { transition-delay: 0.16s; }
 /* 01: the week starts blank and each day is planned in turn, Monday first,
    with a small press as if tapped, the way days are picked in the app. */
-.chips span:nth-child(1) { --d: 0.35s; } .chips span:nth-child(2) { --d: 0.5s; } .chips span:nth-child(3) { --d: 0.65s; }
-.chips span:nth-child(4) { --d: 0.8s; } .chips span:nth-child(5) { --d: 0.95s; } .chips span:nth-child(6) { --d: 1.1s; }
-.chips span:nth-child(7) { --d: 1.25s; }
-.motion .chips span { transition: background 0.35s ease var(--d), border-color 0.35s ease var(--d), color 0.35s ease var(--d); }
-.motion .tile:not(.in) .chips span { background: var(--bg); border-color: var(--line); color: var(--inkSoft); }
-.motion .tile.in .chips span { animation: tap 0.45s var(--ease) var(--d) both; }
+.motion .chips span { transition: background 0.35s ease, border-color 0.35s ease; }
+.motion .chips span:not(.set) { background: var(--bg); border-color: var(--line); color: var(--inkSoft); }
+.motion .chips span.set { animation: tap 0.45s var(--ease) both; }
 @keyframes tap { 0%, 100% { scale: 1; } 45% { scale: 0.86; } }
 
 /* 02: a "you" pin walks into the gym's circle; on arrival the circle deepens,
