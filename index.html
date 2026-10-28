@@ -4,7 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cadence — showing up is the whole battle</title>
-<meta name="description" content="Cadence notices when you get to the gym, so there is nothing to log. A supportive habit app, not a tracker.">
+<meta name="description" content="No logging, no sets, no reps, no calories. Cadence notices when you get to the gym and counts it.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Cadence — showing up is the whole battle">
+<meta property="og:description" content="Cadence notices when you get to the gym and counts it. That is the entire app.">
+<meta property="og:image" content="logo.png">
 <link rel="icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,37 +16,152 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
-  <img src="logo.png" alt="Cadence" class="logo">
-  <h1>Showing up is the whole battle.</h1>
-  <p class="lede">Cadence notices when you get to the gym, so there is nothing to log.</p>
 
-  <h2>What it does</h2>
-  <p>You set a plan — how many times a week, which days, roughly when. Cadence
-  watches for your arrival at the gym you chose and counts the visit itself.
-  No check-in button, no sets, no reps, no calories.</p>
+<header class="nav">
+  <a class="brand" href="./"><img src="logo.png" alt="" width="28" height="28">Cadence</a>
+  <nav>
+    <a href="#how">How it works</a>
+    <a href="#privacy">Privacy</a>
+    <a class="pill" href="#get">Get the app</a>
+  </nav>
+</header>
 
-  <h2>What it doesn't do</h2>
-  <p>It doesn't follow you around. Your phone's operating system watches a
-  circle around your gym and tells the app when you arrive and leave; a visit
-  is stored as a start time and an end time, never a place. It doesn't judge
-  what you did once you were there, and it never uses guilt to get you back.</p>
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <h1 class="reveal">Showing up is<br>the whole battle.</h1>
+    <p class="lede reveal">Cadence notices when you get to the gym and counts it.<br class="wide">That is the entire app.</p>
+    <a class="store reveal" href="#get" aria-label="Coming soon to the App Store">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.9-1.1-2.9-4.2zM13.9 5.2c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg>
+      Coming soon to the App Store
+    </a>
 
-  <div class="callout">
-    <p><strong>No tracking, no ads, no analytics.</strong> Cadence contains no
-    advertising or analytics software of any kind.</p>
-  </div>
+    <div class="stage reveal">
+      <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span><span class="dot d4"></span>
+      <div class="phone" role="img" aria-label="The Cadence home screen: 2 of 3 visits this week">
+        <div class="screen">
+          <div class="notch"></div>
+          <div class="ring">
+            <svg width="168" height="168" viewBox="0 0 168 168" aria-hidden="true">
+              <circle cx="84" cy="84" r="78.5" fill="none" stroke="#e9e6f0" stroke-width="11"/>
+              <circle class="ring-fill" cx="84" cy="84" r="78.5" fill="none" stroke="#5b2ee5" stroke-width="11" stroke-linecap="round" stroke-dasharray="493.2" stroke-dashoffset="164.4" transform="rotate(-90 84 84)"/>
+            </svg>
+            <div class="ring-n">2<small>/ 3</small></div>
+          </div>
+          <div class="days">
+            <span class="went">✓</span><span>T</span><span class="went">✓</span><span class="planned">T</span><span class="planned">F</span><span>S</span><span>S</span>
+          </div>
+          <p class="next">Next planned<b>Thu 6pm</b></p>
+          <p class="gym">PureGym Manchester</p>
+          <div class="map"><span class="fence"></span><span class="pin"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4.2 9.4v5.2M7.4 7.2v9.6M16.6 7.2v9.6M19.8 9.4v5.2M7.4 12h9.2" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span></div>
+          <div class="tabbar">
+            <svg viewBox="0 0 260 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 14 Q130 -14 260 14 L260 60 L0 60Z" fill="#fff"/><path d="M0 14 Q130 -14 260 14" fill="none" stroke="#e9e6f0"/></svg>
+            <span>History</span><span class="on">Home</span><span>Plan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h2>Support</h2>
-  <p>Questions, problems, or want your data removed by hand — email
-  <a href="mailto:mackmillar@gmail.com">mackmillar@gmail.com</a>.</p>
+  <!-- Statement -->
+  <section class="statement reveal">
+    <p><b>No logging, no sets, no reps, no calories.</b> Cadence never asks what you did once you were inside, because showing up is the whole battle and the rest is your business.</p>
+  </section>
 
-  <a class="cta" href="privacy.html">Read the privacy policy</a>
+  <!-- How it works -->
+  <section class="bento" id="how">
+    <article class="tile reveal">
+      <p class="step">01</p>
+      <h3>Set a plan</h3>
+      <p>How many times a week, which days, roughly when.</p>
+      <div class="chips" aria-hidden="true">
+        <span class="pref">M</span><span class="poss">T</span><span class="pref">W</span><span>T</span><span class="pref">F</span><span class="poss">S</span><span>S</span>
+      </div>
+    </article>
+    <article class="tile reveal">
+      <p class="step">02</p>
+      <h3>Just go</h3>
+      <p>Cadence notices when you arrive at your gym and counts the visit itself.</p>
+      <div class="fencebox" aria-hidden="true"><span class="ring1"></span><span class="ring2"></span><span class="pin"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4.2 9.4v5.2M7.4 7.2v9.6M16.6 7.2v9.6M19.8 9.4v5.2M7.4 12h9.2" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span></div>
+    </article>
+    <article class="tile wide reveal">
+      <div>
+        <p class="step">03</p>
+        <h3>Watch it add up</h3>
+        <p>A ring for the week, and a streak counted in weeks with one forgiven week a month built in.</p>
+      </div>
+      <div class="heat" aria-hidden="true" id="heat"></div>
+    </article>
+  </section>
 
-  <hr class="rule">
-  <footer>
-    <a href="privacy.html">Privacy</a> · <a href="mailto:mackmillar@gmail.com">Support</a>
-  </footer>
-</div>
+  <!-- Nudges -->
+  <section class="panel reveal">
+    <div class="panel-text">
+      <p class="eyebrow">NUDGES</p>
+      <h2>A nudge,<br>not a nag.</h2>
+      <p>Every message is written to be read on a lock screen in one second. None of them is a telling-off.</p>
+    </div>
+    <div class="stack" aria-label="Example notifications">
+      <div class="note"><img src="logo.png" alt=""><div><b>Gym day</b><span>You’re on for 6pm.</span></div><time>now</time></div>
+      <div class="note"><img src="logo.png" alt=""><div><b>Nice one</b><span>2 of 3 this week.</span></div><time>Tue</time></div>
+      <div class="note"><img src="logo.png" alt=""><div><b>All good</b><span>Tomorrow’s there if you want it.</span></div><time>Mon</time></div>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section class="privacy" id="privacy">
+    <h2 class="reveal">Your gym,<br>not your movements.</h2>
+    <div class="facts">
+      <div class="fact reveal"><h3>Entry and exit only</h3><p>Your phone watches a circle around your gym and tells Cadence when you arrive and leave. Nothing else.</p></div>
+      <div class="fact reveal"><h3>No place in a visit</h3><p>A visit is stored as a start time and an end time, never a location.</p></div>
+      <div class="fact reveal"><h3>No ads, no analytics</h3><p>Cadence contains no advertising or tracking software of any kind.</p></div>
+    </div>
+    <a class="textlink reveal" href="privacy.html">Read the privacy policy</a>
+  </section>
+
+  <!-- Get -->
+  <section class="get" id="get">
+    <img class="mark reveal" src="logo.png" alt="" width="72" height="72">
+    <h2 class="reveal">Turn up.<br>Cadence counts it.</h2>
+    <p class="reveal">Free, always. Cadence Plus adds more gyms and four more voices.</p>
+    <span class="store reveal">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.9-1.1-2.9-4.2zM13.9 5.2c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg>
+      Coming soon to the App Store
+    </span>
+  </section>
+</main>
+
+<footer class="foot" id="support">
+  <a class="brand" href="./"><img src="logo.png" alt="" width="22" height="22">Cadence</a>
+  <p>Questions, problems, or want your data removed by hand: <a href="mailto:mackmillar@gmail.com">mackmillar@gmail.com</a></p>
+  <nav><a href="privacy.html">Privacy</a><a href="mailto:mackmillar@gmail.com">Support</a><span>© 2026</span></nav>
+</footer>
+
+<script>
+  // Heat map: twelve weeks of visits, the same rhythm on every load.
+  (function () {
+    var h = document.getElementById('heat'); if (!h) return;
+    var seed = 7, rnd = function () { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; };
+    for (var w = 0; w < 12; w++) {
+      var col = document.createElement('div');
+      for (var d = 0; d < 7; d++) {
+        var i = document.createElement('i'), r = rnd();
+        if (w === 11 && d > 3) i.className = 'future';
+        else if (d < 5 && r > 0.45) i.className = r > 0.82 ? 'many' : 'one';
+        if (w === 11 && d === 3) i.className += ' today';
+        col.appendChild(i);
+      }
+      h.appendChild(col);
+    }
+  })();
+  // Fade sections in as they arrive; skipped entirely for reduced motion.
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('motion');
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  }
+</script>
 </body>
 </html>
