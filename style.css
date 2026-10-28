@@ -66,7 +66,7 @@ section { max-width: var(--page); margin: 0 auto; padding: 0 var(--gutter); }
 /* Hero */
 .hero { position: relative; text-align: center; padding-top: 88px; }
 .hero > :not(.particles) { position: relative; z-index: 1; }
-.hero h1 .line { display: block; overflow: hidden; padding-bottom: 0.08em; margin-bottom: -0.08em; }
+.hero h1 .line { display: block; overflow: hidden; padding-bottom: 0.24em; margin-bottom: -0.24em; }
 .hero h1 .line > span { display: inline-block; }
 .hero h1 { font-size: clamp(48px, 9vw, 112px); line-height: 0.95; font-weight: 800; letter-spacing: -0.045em; }
 .lede { margin: var(--space-four) auto 0; max-width: 600px; text-wrap: balance; font-size: clamp(17px, 2vw, 20px); line-height: 1.5; color: var(--inkSoft); }
@@ -137,15 +137,21 @@ section { max-width: var(--page); margin: 0 auto; padding: 0 var(--gutter); }
 .next { margin-top: var(--space-three); font-size: 12px; line-height: 18px; font-weight: 600; color: var(--inkSoft); text-align: center; }
 .next b { display: block; font-size: 16px; font-weight: 800; color: var(--ink); }
 .gym { margin-top: var(--space-two); font-size: 14px; color: var(--inkSoft); }
-.map { position: relative; flex: 1; width: 100%; margin-top: var(--space-three); background:
-  linear-gradient(90deg, transparent 47%, #fff 47%, #fff 53%, transparent 53%) 0 0 / 90px 90px,
-  linear-gradient(0deg, transparent 47%, #fff 47%, #fff 53%, transparent 53%) 0 0 / 90px 90px,
-  var(--heatEmpty); }
-.fence { position: absolute; left: 50%; top: 42%; width: 110px; height: 110px; margin: -55px 0 0 -55px; border-radius: var(--radius-pill); background: rgba(91, 46, 229, 0.12); }
+/* Home's map, as on iOS: a street map that fades into the page at the top
+   (the app's own gradient stops) and runs under the tab bar's curve. */
+.map { position: relative; flex: 1; width: 100%; margin-top: var(--space-two); overflow: hidden; }
+.map .streets { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.map::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.72) 18%, rgba(255, 255, 255, 0.22) 45%, rgba(255, 255, 255, 0) 100%); }
+.street-label text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif; font-size: 7px; font-weight: 600; fill: #8f8a80; letter-spacing: 0.2px; }
 .pin { position: absolute; left: 50%; top: 42%; width: 34px; height: 34px; margin: -17px 0 0 -17px; border-radius: var(--radius-pill); background: var(--purple); border: 3px solid #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); display: flex; align-items: center; justify-content: center; }
-.tabbar { position: absolute; left: 0; right: 0; bottom: 0; height: 72px; display: flex; align-items: center; padding-top: 10px; }
-.tabbar svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-.tabbar span { position: relative; flex: 1; text-align: center; font-size: 10px; font-weight: 600; color: var(--inkSoft); }
+.map .pin { z-index: 1; }
+.map .gym-pin { left: 66%; top: 38%; }
+.map .user-pin { left: 31%; top: 56%; background: var(--ink); }
+.tabbar { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; height: 84px; display: flex; align-items: center; padding: 14px 0 6px; }
+.tabbar > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.tabbar .tab { position: relative; flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 10px; font-weight: 600; color: var(--inkSoft); }
+.tabbar .tab svg { display: block; }
 .tabbar .on { color: var(--purple); font-weight: 700; }
 
 /* Statement */
