@@ -3,12 +3,60 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cadence — showing up is the whole battle</title>
-<meta name="description" content="No logging, no sets, no reps, no calories. Cadence notices when you get to the gym and counts it.">
+<title>Cadence: Gym Habit — the app that counts your gym visits for you</title>
+<meta name="description" content="Cadence is a gym habit app for iPhone. Set the days you mean to go, and it notices when you arrive at your gym and counts the visit. No logging, no sets, no reps.">
+<link rel="canonical" href="https://cadencegym.app/">
 <meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cadence">
+<meta property="og:url" content="https://cadencegym.app/">
 <meta property="og:title" content="Cadence — showing up is the whole battle">
 <meta property="og:description" content="Nothing to log, nothing to tap. Cadence notices when you’re at the gym and quietly helps you make a habit of going.">
-<meta property="og:image" content="logo.png">
+<meta property="og:image" content="https://cadencegym.app/logo.png">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://cadencegym.app/#website",
+      "url": "https://cadencegym.app/",
+      "name": "Cadence",
+      "alternateName": ["Cadence: Gym Habit", "Cadence gym app"]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://cadencegym.app/#org",
+      "name": "Cadence",
+      "url": "https://cadencegym.app/",
+      "logo": "https://cadencegym.app/logo.png",
+      "email": "support@cadencegym.app"
+    },
+    {
+      "@type": "MobileApplication",
+      "name": "Cadence: Gym Habit",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "description": "A gym habit app that notices when you arrive at your gym and counts the visit, with a weekly target, a forgiving weekly streak and short reminders on planned days. No workout logging.",
+      "publisher": { "@id": "https://cadencegym.app/#org" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Does Cadence track my workouts?", "acceptedAnswer": { "@type": "Answer", "text": "No. Cadence counts visits, not workouts. There are no sets, reps, weights or calories to log. What you do once you are inside is your business." } },
+        { "@type": "Question", "name": "How does Cadence know I went to the gym?", "acceptedAnswer": { "@type": "Answer", "text": "You pick your gym once. Your phone watches a circle around it and tells Cadence when you arrive and leave. Stay twenty minutes and the visit counts, even with the app closed." } },
+        { "@type": "Question", "name": "Why does Cadence need Always location?", "acceptedAnswer": { "@type": "Answer", "text": "To notice you have arrived while the app is closed. It is the only thing location is used for. Only your gym's location is stored, never a trail of where you have been." } },
+        { "@type": "Question", "name": "Will it drain my battery?", "acceptedAnswer": { "@type": "Answer", "text": "No. Cadence uses the system's geofencing, the same low-power mechanism behind location-based reminders. It does not run GPS in the background." } },
+        { "@type": "Question", "name": "What happens if I miss a week?", "acceptedAnswer": { "@type": "Answer", "text": "Your streak is counted in weeks and one missed week a month is forgiven automatically. A missed session gets a kind word, never a telling-off." } },
+        { "@type": "Question", "name": "Is Cadence free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Counting visits, your history, your streak and your account are free, always. Cadence Plus adds more than one gym and extra voices for the reminders." } },
+        { "@type": "Question", "name": "How many times a week should I go to the gym?", "acceptedAnswer": { "@type": "Answer", "text": "For most people, two or three times a week is a good place to start, and it is enough to meet the NHS guidance of strength exercise on at least two days a week. Pick a number you can keep in a busy week, not your best one." } }
+      ]
+    }
+  ]
+}
+</script>
 <link rel="icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,6 +168,7 @@
 
   <!-- How it works -->
   <section class="bento" id="how">
+    <h2 class="sr-only">How it works</h2>
     <article class="tile reveal">
       <p class="step">01</p>
       <h3>Set a plan</h3>
@@ -166,7 +215,21 @@
       <div class="fact reveal"><h3>No place in a visit</h3><p>A visit is stored as a start time and an end time, never a location.</p></div>
       <div class="fact reveal"><h3>No ads, no analytics</h3><p>Cadence contains no advertising or tracking software of any kind.</p></div>
     </div>
-    <a class="textlink reveal" href="privacy.html">Read the privacy policy</a>
+    <a class="textlink reveal" href="privacy">Read the privacy policy</a>
+  </section>
+
+  <!-- FAQ. Keep in step with the FAQPage block in <head>. -->
+  <section class="faq" id="faq">
+    <h2 class="reveal">Questions</h2>
+    <div class="qs">
+      <details class="q reveal"><summary>Does Cadence track my workouts?</summary><p>No. Cadence counts visits, not workouts. There are no sets, reps, weights or calories to log. What you do once you’re inside is your business.</p></details>
+      <details class="q reveal"><summary>How does it know I went?</summary><p>You pick your gym once. Your phone watches a circle around it and tells Cadence when you arrive and leave. Stay twenty minutes and the visit counts, even with the app closed.</p></details>
+      <details class="q reveal"><summary>Why does it need “Always” location?</summary><p>To notice you’ve arrived while the app is closed. That’s the only thing location is used for. Only your gym’s location is stored, never a trail of where you’ve been.</p></details>
+      <details class="q reveal"><summary>Will it drain my battery?</summary><p>No. Cadence uses the system’s geofencing, the same low-power mechanism behind location-based reminders. It doesn’t run GPS in the background.</p></details>
+      <details class="q reveal"><summary>What if I miss a week?</summary><p>Your streak is counted in weeks, and one missed week a month is forgiven automatically. A missed session gets a kind word, never a telling-off.</p></details>
+      <details class="q reveal"><summary>Is it free?</summary><p>Yes. Counting visits, your history, your streak and your account are free, always. Cadence Plus adds more than one gym and extra voices for the reminders.</p></details>
+      <details class="q reveal"><summary>How many times a week should I go?</summary><p>For most people, two or three is a good place to start. Pick the number you can keep in a busy week, not your best one. <a href="how-often-should-you-go-to-the-gym">More on picking a weekly target</a>.</p></details>
+    </div>
   </section>
 
   <!-- Get -->
@@ -184,7 +247,7 @@
 <footer class="foot" id="support">
   <a class="brand" href="./"><img src="logo.png" alt="" width="22" height="22">Cadence</a>
   <p>Questions, problems, or want your data removed by hand: <a href="mailto:support@cadencegym.app">support@cadencegym.app</a></p>
-  <nav><a href="privacy.html">Privacy</a><a href="mailto:support@cadencegym.app">Support</a><span>© 2026</span></nav>
+  <nav><a href="how-often-should-you-go-to-the-gym">Guide</a><a href="privacy">Privacy</a><a href="terms">Terms</a><a href="mailto:support@cadencegym.app">Support</a><span>© 2026</span></nav>
 </footer>
 
 <script>
