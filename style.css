@@ -354,3 +354,23 @@ table { border-collapse: collapse; width: 100%; font-size: 15px; }
 th, td { text-align: left; vertical-align: top; padding: 10px 14px 10px 0; border-bottom: 1px solid var(--line); }
 th { font-weight: 700; color: var(--ink); white-space: nowrap; }
 td { color: #2a2433; }
+
+/* ---- Guides ---- */
+.guides-home { padding-top: 160px; text-align: center; }
+.guides-home h2 { font-size: clamp(40px, 6vw, 72px); line-height: 1; font-weight: 800; letter-spacing: -0.045em; }
+.guides-home > p { margin-top: var(--space-four); font-size: 18px; color: var(--inkSoft); }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-three); margin: var(--space-five) 0 0; text-align: left; }
+.card { display: flex; flex-direction: column; gap: 6px; border: 1.5px solid var(--line); border-radius: var(--radius-card); padding: 22px 24px; color: var(--ink); text-decoration: none; transition: border-color 0.2s ease; }
+.card:hover { border-color: var(--purple); }
+.card b { font-size: 17px; font-weight: 700; }
+.card span { font-size: 15px; line-height: 1.5; color: var(--inkSoft); }
+.wrap .cards { margin-top: 16px; }
+.wrap .qs { margin-top: 12px; }
+.wrap .q summary { font-size: 16px; padding: 16px 0; }
+.wrap .q p { color: #2a2433; font-size: 15px; margin: 0 0 16px; }
+.crumbs { margin: 0; font-size: 14px; }
+.crumbs a { color: var(--inkSoft); text-decoration: none; }
+.crumbs a:hover { color: var(--purple); }
+@media (max-width: 760px) {
+  .guides-home { padding-top: 96px; }
+}
