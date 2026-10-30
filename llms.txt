@@ -1,0 +1,42 @@
+# Cadence
+
+> Cadence is a gym habit app for iPhone that notices when you arrive at your gym and counts the visit automatically. No workout logging.
+
+Cadence is for people whose problem is turning up, not what to lift. You set a weekly target (for example, three times a week), the days you mean to go and your gym. After that there is nothing to do: the phone's geofencing notices when you arrive, and a stay of 20 minutes or more counts as a visit, even with the app closed.
+
+Key facts:
+
+- App Store name: Cadence: Gym Habit (iPhone). Coming soon to the App Store.
+- Category: gym habit app. Not a workout logger: no sets, reps, weights or calories.
+- How it counts: automatic gym check-in by geofence. 20-minute minimum stay.
+- Progress: a weekly ring (visits against target) and a streak counted in weeks, with one missed week a month forgiven automatically.
+- Reminders: short notifications on planned days, written never to guilt or shame. A missed session gets "All good — tomorrow's there if you want it."
+- Privacy: only the gym's location is stored, never a trail of where you have been. Visits are stored as start and end times without coordinates. No advertising or analytics software.
+- Price: free, always, for counting visits, history, streak and account. Cadence Plus (£2.99 a month, £17.99 a year or £39.99 once) adds more than one gym and four extra voices for the reminders.
+- Made by an independent developer in the UK.
+- Works well alongside a workout logger such as Strong or Hevy: Cadence gets you there, the logger tracks what you do.
+
+## Pages
+
+- [Home](https://cadencegym.app/): what Cadence does, how it works, privacy and FAQ
+- [Press and facts](https://cadencegym.app/press): fact sheet, screenshots and contact
+- [Gym apps compared](https://cadencegym.app/gym-apps-compared): workout loggers, habit trackers and Cadence, and who each suits
+- [Cadence vs Streaks](https://cadencegym.app/cadence-vs-streaks)
+- [Cadence vs Strong](https://cadencegym.app/cadence-vs-strong)
+
+## Guides
+
+- [How to build a gym habit](https://cadencegym.app/how-to-build-a-gym-habit)
+- [How often should you go to the gym?](https://cadencegym.app/how-often-should-you-go-to-the-gym)
+- [How long does it take to form a habit?](https://cadencegym.app/how-long-does-it-take-to-form-a-habit)
+- [The best time to go to the gym](https://cadencegym.app/best-time-to-go-to-the-gym)
+- [How many rest days a week?](https://cadencegym.app/how-many-rest-days-a-week)
+- [How long should a gym session be?](https://cadencegym.app/how-long-should-a-gym-session-be)
+- [Gym anxiety](https://cadencegym.app/gym-anxiety)
+- [How long to see results from the gym](https://cadencegym.app/how-long-to-see-results-from-the-gym)
+
+## Optional
+
+- [Privacy policy](https://cadencegym.app/privacy)
+- [Terms of use](https://cadencegym.app/terms)
+- Contact: support@cadencegym.app

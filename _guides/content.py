@@ -1,9 +1,14 @@
 # Content for the cadencegym.app guides. Rendered by build.py.
 # Voice: docs/tone-of-voice.md — plain, British, no exclamation marks, no guilt, no hype.
 
-CTA = ('<div class="callout"><p><strong>This is how Cadence works.</strong> You set a weekly target and the days '
-       'you mean to go. Cadence notices when you arrive at your gym and counts the visit for you, with nothing to log. '
-       'Your streak is counted in weeks, and one missed week a month is forgiven automatically.</p></div>'
+# The one-line definition. Keep it word for word wherever Cadence is described
+# (home FAQ, JSON-LD, llms.txt, press page, App Store), so AI tools can repeat it.
+DEFINITION = ("Cadence is a gym habit app for iPhone that notices when you arrive at your gym "
+              "and counts the visit automatically. No workout logging.")
+
+CTA = ('<div class="callout"><p><strong>How Cadence helps.</strong> ' + DEFINITION + ' You set a weekly target '
+       'and the days you mean to go, and your streak is counted in weeks, with one missed week a month forgiven '
+       'automatically.</p></div>'
        '\n  <a class="cta" href="./">See how Cadence works</a>')
 
 GUIDES = [
@@ -333,5 +338,180 @@ GUIDES = [
   ("How long does it take to build muscle?", "Visible muscle growth usually takes around eight to twelve weeks of regular strength training, with clearer changes over six to twelve months."),
  ],
  "related": ["how-long-does-it-take-to-form-a-habit", "how-often-should-you-go-to-the-gym", "how-many-rest-days-a-week"],
+},
+{
+ "slug": "how-to-build-a-gym-habit",
+ "title": "How to build a gym habit that survives a bad week",
+ "short": "How to build a gym habit",
+ "h1": "How to build a gym habit (that survives a bad week)",
+ "kicker": "Seven rules for turning up, from the research",
+ "desc": "How to make going to the gym a habit: pick a number you can keep, fix the days, lower the bar, count weeks not days, and expect it to take a couple of months.",
+ "card": "Seven rules for turning up, and why most attempts stop in week three.",
+ "published": "2026-10-30",
+ "body": """
+  <p><strong>Short answer: pick a small weekly target, tie it to fixed days and times, make each visit easy to start, and judge yourself by the week, not the day.</strong> Expect it to take a couple of months before it feels automatic. Most attempts fail in the slow middle, not at the start.</p>
+
+  <h2>1. Pick a number you can keep in a bad week</h2>
+  <p>Set your weekly target from an ordinary, slightly-too-busy week, not from your most motivated Monday. For most people that’s two or three visits. Going more than you planned feels good; going less than you planned feels like failure, even when you still went. More in <a href="how-often-should-you-go-to-the-gym">how often to go</a>.</p>
+
+  <h2>2. Fix the days and a rough time</h2>
+  <p>Habits form around a cue. “Monday, Wednesday and Friday after work” becomes automatic far faster than “three times a week, whenever”. Deciding once means you’re not negotiating with yourself every morning. If you’re unsure when, see <a href="best-time-to-go-to-the-gym">the best time to go</a>.</p>
+
+  <h2>3. Make turning up the whole goal</h2>
+  <p>The habit is going, not the workout. On a tired day, a 20-minute session still repeats the cue and keeps the pattern alive. Lower the bar until you can clear it on your worst day; the good days will take care of themselves. See <a href="how-long-should-a-gym-session-be">how long a session needs to be</a>.</p>
+
+  <h2>4. Remove the friction before it starts</h2>
+  <ul>
+    <li>Pack your bag the night before and leave it by the door.</li>
+    <li>Choose a gym on your normal route, not the nicer one across town.</li>
+    <li>Have a short written plan, so you never stand around wondering what to do.</li>
+  </ul>
+
+  <h2>5. Count weeks, not days</h2>
+  <p>A daily streak breaks on your first rest day, which is the day you’re meant to rest. A weekly count asks a fairer question: did you hit your number this week? A bad week then costs one week, not the whole thing. <a href="how-many-rest-days-a-week">Rest days</a> belong in the plan.</p>
+
+  <h2>6. Treat a missed session as weather</h2>
+  <p>In the best-known study of habit formation, from UCL, missing a single day didn’t meaningfully set people back. What breaks habits is the story you tell after a miss (“I’ve blown it”), not the miss itself. Shrug, and go on the next planned day.</p>
+
+  <h2>7. Expect it to take about two months</h2>
+  <p>The same study found a median of 66 days for a behaviour to feel automatic, and exercise sat at the slow end. If week three still takes effort, nothing is wrong; that’s the normal part of the curve. More in <a href="how-long-does-it-take-to-form-a-habit">how long a habit takes to form</a>.</p>
+
+  <h2>If nerves are what stop you</h2>
+  <p>Gym anxiety is common and fades quickly with familiarity. Going at quiet times and keeping first visits short helps most. See <a href="gym-anxiety">gym anxiety</a>.</p>
+""",
+ "faq": [
+  ("How do I make going to the gym a habit?", "Pick a small weekly target you can keep in a busy week, fix the days and a rough time, make each visit easy to start, count weeks rather than days, and expect it to take around two months to feel automatic."),
+  ("How many days does it take to build a gym habit?", "Around two months on average. In a UCL study the median was 66 days, with a wide range, and exercise habits took longer than simpler ones."),
+  ("What if I miss a session?", "Carry on with the next planned day. Missing a single session doesn't meaningfully set a habit back; giving up afterwards does."),
+  ("Is there an app that helps you build a gym habit?", "Cadence is a gym habit app for iPhone that notices when you arrive at your gym and counts the visit automatically. No workout logging. It uses a weekly target and a weekly streak, with one missed week a month forgiven."),
+ ],
+ "related": ["how-long-does-it-take-to-form-a-habit", "how-often-should-you-go-to-the-gym", "gym-anxiety"],
+},
+{
+ "section": "compare",
+ "slug": "gym-apps-compared",
+ "title": "Gym apps compared: workout loggers, habit trackers and Cadence",
+ "short": "Gym apps compared",
+ "h1": "Gym apps compared: which kind do you actually need?",
+ "kicker": "Workout loggers, habit trackers and gym habit apps",
+ "desc": "An honest comparison of gym apps: workout loggers like Strong, Hevy and Fitbod, habit trackers like Streaks, and Cadence, which counts gym visits automatically.",
+ "card": "Loggers, habit trackers and Cadence, and who each one suits.",
+ "published": "2026-10-30",
+ "body": """
+  <p><strong>Short answer: if your problem is what to do in the gym, use a workout logger like Strong, Hevy or Fitbod. If your problem is getting there at all, use a habit app like Cadence. Plenty of people use one of each.</strong> Most “best gym apps” lists only cover the first kind.</p>
+  <p>We make Cadence, so read this with that in mind. We’ve tried to be fair about what the others do well, and about what Cadence doesn’t do. Features and prices change, so check each app’s App Store page.</p>
+
+  <h2>The three kinds of gym app</h2>
+  <h3>Workout loggers</h3>
+  <p>You record each exercise, set, rep and weight. They show your history and progress over time, and some suggest what to do next. Good for anyone who already goes and wants to get stronger in a structured way. They need input every session.</p>
+
+  <h3>General habit trackers</h3>
+  <p>You tick off any habit you choose: water, reading, the gym. Flexible, often beautifully designed, and good for tracking many habits in one place. Usually you mark the gym as done yourself, and most count daily streaks.</p>
+
+  <h3>Gym habit apps</h3>
+  <p>Built for the single question “did I go?”. Cadence notices when you arrive at your gym and counts the visit automatically, so there’s nothing to tick. It doesn’t record what you do inside.</p>
+
+  <h2>Side by side</h2>
+  <div class="tablewrap"><table><thead><tr><th>App</th><th>Kind</th><th>Best for</th><th>How the gym gets recorded</th></tr></thead><tbody>
+  <tr><td><strong>Strong</strong></td><td>Workout logger</td><td>Simple, fast logging of lifts and progress</td><td>You log each set</td></tr>
+  <tr><td><strong>Hevy</strong></td><td>Workout logger</td><td>Logging with a social feed and shared routines</td><td>You log each set</td></tr>
+  <tr><td><strong>Fitbod</strong></td><td>Workout planner and logger</td><td>Generated workouts that adapt to your history</td><td>You follow and log the plan</td></tr>
+  <tr><td><strong>Streaks</strong></td><td>Habit tracker (iPhone)</td><td>Tracking a handful of daily habits; some can complete from Apple Health</td><td>You tick it, or it completes from Health data</td></tr>
+  <tr><td><strong>Cadence</strong></td><td>Gym habit app (iPhone)</td><td>Building the habit of turning up, with nothing to log</td><td>Automatically, when you arrive at your gym</td></tr>
+  </tbody></table></div>
+
+  <h2>Which should you use?</h2>
+  <ul>
+    <li><strong>You go regularly and want to get stronger:</strong> a workout logger. Strong if you want it simple, Hevy if you like the social side, Fitbod if you want the plan written for you.</li>
+    <li><strong>You want one app for lots of habits:</strong> a general habit tracker such as Streaks.</li>
+    <li><strong>You keep meaning to go and don’t:</strong> Cadence. It’s built for the part before the workout, and it never asks you to log anything.</li>
+    <li><strong>Both:</strong> Cadence to get you there, a logger once you’re inside. They don’t overlap.</li>
+  </ul>
+
+  <h2>What Cadence doesn’t do</h2>
+  <p>No exercise library, no sets or reps, no workout plans, no calories, no social feed. It doesn’t track runs or home workouts; it counts visits to the gym you choose. If you need any of those, pair it with a logger. Read <a href="cadence-vs-strong">Cadence vs Strong</a> and <a href="cadence-vs-streaks">Cadence vs Streaks</a> for the detail.</p>
+""",
+ "faq": [
+  ("What is the best gym app?", "It depends on the problem. For logging workouts and progress, apps like Strong, Hevy and Fitbod are popular. For building the habit of actually going, Cadence is a gym habit app for iPhone that notices when you arrive at your gym and counts the visit automatically. No workout logging."),
+  ("Is there an app that tracks gym visits automatically?", "Yes. Cadence uses your phone's geofencing to notice when you arrive at your chosen gym, and counts a stay of 20 minutes or more as a visit, even with the app closed."),
+  ("Can I use Cadence with Strong or Hevy?", "Yes. Cadence counts whether you went; a logger records what you did. They don't overlap."),
+ ],
+ "related": ["cadence-vs-strong", "cadence-vs-streaks", "how-to-build-a-gym-habit"],
+},
+{
+ "section": "compare",
+ "slug": "cadence-vs-streaks",
+ "title": "Cadence vs Streaks: which habit app is better for the gym?",
+ "short": "Cadence vs Streaks",
+ "h1": "Cadence vs Streaks",
+ "kicker": "Two iPhone habit apps, built for different jobs",
+ "desc": "Cadence vs Streaks for building a gym habit: Streaks tracks many daily habits you tick off; Cadence counts gym visits automatically with a weekly target.",
+ "card": "A general habit tracker against one built only for the gym.",
+ "published": "2026-10-30",
+ "body": """
+  <p><strong>Short answer: Streaks is a general habit tracker for a handful of daily habits. Cadence does one thing: it notices when you arrive at your gym and counts the visit, against a weekly target. If the gym is the habit you care about, Cadence fits it more closely. If you want one app for many habits, Streaks does more.</strong></p>
+  <p>We make Cadence. Streaks is a well-made, long-established app, and we’ve tried to describe it fairly; check its App Store page for current features and price.</p>
+
+  <div class="tablewrap"><table><thead><tr><th></th><th>Cadence</th><th>Streaks</th></tr></thead><tbody>
+  <tr><td>Built for</td><td>Going to the gym</td><td>Any daily habit</td></tr>
+  <tr><td>Recording a visit</td><td>Automatic, when you arrive at your gym</td><td>Tick it off, or complete it from Apple Health data</td></tr>
+  <tr><td>Target</td><td>Visits per week, on days you choose</td><td>Daily, or a number of times per week</td></tr>
+  <tr><td>Missed days</td><td>Streak counted in weeks; one missed week a month forgiven</td><td>Streak-based, with options for skipping days</td></tr>
+  <tr><td>Reminders</td><td>Short nudges on planned days, never a telling-off</td><td>Reminders per task</td></tr>
+  <tr><td>Other habits</td><td>No, gym only</td><td>Yes, many</td></tr>
+  <tr><td>Price</td><td>Free; Plus is optional</td><td>Paid app</td></tr>
+  </tbody></table></div>
+
+  <h2>Where Streaks is better</h2>
+  <p>Tracking several habits in one place, with a lot of flexibility over how each one counts. If “gym” is one line on a list of ten, Streaks is the better home for it.</p>
+
+  <h2>Where Cadence is better</h2>
+  <p>The gym specifically. Because it counts the visit when you arrive, there’s nothing to remember to tick, and it can’t be ticked from the sofa. The weekly target and forgiving weekly streak suit the gym, where rest days are part of the plan rather than a break in the chain. See <a href="how-to-build-a-gym-habit">how to build a gym habit</a> for why that matters.</p>
+
+  <h2>Can you use both?</h2>
+  <p>Yes. Some people keep Streaks for everything else and let Cadence handle the gym.</p>
+""",
+ "faq": [
+  ("Is Cadence or Streaks better for the gym?", "For the gym alone, Cadence fits more closely: it counts visits automatically when you arrive and uses a weekly target. Streaks is better if you want to track many different habits in one app."),
+  ("Does Streaks track gym visits automatically?", "Streaks can complete some tasks from Apple Health data, such as workouts. Cadence counts a visit when you physically arrive at your chosen gym, using geofencing."),
+ ],
+ "related": ["gym-apps-compared", "cadence-vs-strong", "how-to-build-a-gym-habit"],
+},
+{
+ "section": "compare",
+ "slug": "cadence-vs-strong",
+ "title": "Cadence vs Strong: do you need a workout logger or a gym habit app?",
+ "short": "Cadence vs Strong",
+ "h1": "Cadence vs Strong",
+ "kicker": "Getting there, and what you do when you’re there",
+ "desc": "Cadence vs Strong: Strong logs your sets, reps and weights; Cadence counts gym visits automatically to build the habit of going. They solve different problems and work well together.",
+ "card": "Not rivals: one gets you there, the other logs the lifting.",
+ "published": "2026-10-30",
+ "body": """
+  <p><strong>Short answer: they don’t compete. Strong is a workout logger for recording sets, reps and weights. Cadence is a gym habit app that counts your visits automatically. Strong helps you once you’re in the gym; Cadence helps you get there. Many people would be well served by both.</strong></p>
+  <p>We make Cadence. Strong is a popular, well-regarded logger; check its App Store page for current features and price.</p>
+
+  <div class="tablewrap"><table><thead><tr><th></th><th>Cadence</th><th>Strong</th></tr></thead><tbody>
+  <tr><td>Answers</td><td>Did I go this week?</td><td>What did I lift, and am I getting stronger?</td></tr>
+  <tr><td>Input needed</td><td>None after setup</td><td>Every set, every session</td></tr>
+  <tr><td>Records</td><td>Visits: arrival and departure times</td><td>Exercises, sets, reps, weights, history</td></tr>
+  <tr><td>Best for</td><td>People who struggle to go consistently</td><td>People who already go and want structured progress</td></tr>
+  <tr><td>Price</td><td>Free; Plus is optional</td><td>Free to start, with a paid tier</td></tr>
+  </tbody></table></div>
+
+  <h2>Choose Strong if</h2>
+  <p>You go reliably and want to track progressive overload: adding weight or reps over time, seeing personal records, and following a programme.</p>
+
+  <h2>Choose Cadence if</h2>
+  <p>The hard part is turning up. Cadence asks for nothing in the gym, so it works even on the days you’d never open a logger. It nudges you on planned days and counts weeks, not days, so a rest day never breaks anything.</p>
+
+  <h2>Using both</h2>
+  <p>Cadence gets you through the door; Strong records the session. Neither duplicates the other. If you’re early in building the habit, start with Cadence alone and add a logger once going feels normal; see <a href="how-long-does-it-take-to-form-a-habit">how long that usually takes</a>.</p>
+""",
+ "faq": [
+  ("Is Cadence a replacement for Strong?", "No. Strong logs workouts; Cadence counts gym visits automatically to help you build the habit of going. They solve different problems and work together."),
+  ("Do I need a workout logger to build a gym habit?", "Not at first. Logging every set can be one more barrier when the hard part is turning up. Many people start by just tracking visits and add a logger later."),
+ ],
+ "related": ["gym-apps-compared", "cadence-vs-streaks", "how-long-to-see-results-from-the-gym"],
 },
 ]

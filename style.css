@@ -374,3 +374,11 @@ td { color: #2a2433; }
 @media (max-width: 760px) {
   .guides-home { padding-top: 96px; }
 }
+
+/* ---- Press ---- */
+.shots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 16px 0; }
+.shots img { width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); display: block; }
+.wrap th { white-space: normal; padding-right: 18px; }
+@media (max-width: 760px) {
+  .shots { grid-template-columns: repeat(2, 1fr); }
+}

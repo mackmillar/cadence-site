@@ -47,7 +47,7 @@ HEAD = """<!doctype html>
 """
 FOOT = """
   <hr class="rule">
-  <footer><a href="./">Cadence</a> · <a href="guides">Guides</a> · <a href="privacy">Privacy</a> · <a href="terms">Terms</a> · <a href="mailto:support@cadencegym.app">support@cadencegym.app</a></footer>
+  <footer><a href="./">Cadence</a> · <a href="guides">Guides</a> · <a href="press">Press</a> · <a href="privacy">Privacy</a> · <a href="terms">Terms</a> · <a href="mailto:support@cadencegym.app">support@cadencegym.app</a></footer>
 </main>
 </body>
 </html>
@@ -93,19 +93,25 @@ def index():
          "hasPart": [{"@type": "Article", "headline": g["h1"], "url": BASE + g["slug"]} for g in GUIDES]},
         crumbs([("Cadence", BASE), ("Guides", url)])]}
     out = HEAD.format(title="Gym guides: how often to go, rest days, habits and gym anxiety — Cadence",
-                      desc=e("Plain, short guides to building a gym habit that lasts: how often to go, the best time, rest days, session length, gym anxiety and how long results take."),
+                      desc=e("Plain, short guides to building a gym habit that lasts: how often to go, the best time, rest days, session length, gym anxiety and how long results take, plus honest gym app comparisons."),
                       url=url, ogtype="website", ogtitle="Gym guides from Cadence", ld=json.dumps(ld, indent=2, ensure_ascii=False))
-    out += "  <h1>Gym guides</h1>\n  <p class=\"meta\">Short, plain answers about the hardest part: turning up.</p>\n  <div class=\"cards\">\n"
-    for g in GUIDES:
-        out += f'    <a class="card" href="{g["slug"]}"><b>{e(g["short"])}</b><span>{e(g["card"])}</span></a>\n'
-    out += "  </div>\n\n  " + CTA + "\n" + FOOT
+    out += "  <h1>Gym guides</h1>\n  <p class=\"meta\">Short, plain answers about the hardest part: turning up.</p>\n"
+    for heading, sec in (("", None), ("Comparing gym apps", "compare")):
+        if heading:
+            out += f"\n  <h2>{heading}</h2>\n"
+        out += '  <div class="cards">\n'
+        for g in GUIDES:
+            if g.get("section") == sec:
+                out += f'    <a class="card" href="{g["slug"]}"><b>{e(g["short"])}</b><span>{e(g["card"])}</span></a>\n'
+        out += "  </div>\n"
+    out += "\n  " + CTA + "\n" + FOOT
     return out
 
 for g in GUIDES:
     open(os.path.join(SITE, g["slug"] + ".html"), "w").write(guide(g))
 open(os.path.join(SITE, "guides.html"), "w").write(index())
 
-urls = [("", "2026-10-30"), ("guides", "2026-10-30")] + [(g["slug"], g.get("modified", g["published"])) for g in GUIDES] + [("privacy", "2026-10-15"), ("terms", "2026-10-15")]
+urls = [("", "2026-10-30"), ("guides", "2026-10-30")] + [(g["slug"], g.get("modified", g["published"])) for g in GUIDES] + [("press", "2026-10-30"), ("privacy", "2026-10-15"), ("terms", "2026-10-15")]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 sm += "".join(f"  <url><loc>{BASE}{p}</loc><lastmod>{d}</lastmod></url>\n" for p, d in urls) + "</urlset>\n"
 open(os.path.join(SITE, "sitemap.xml"), "w").write(sm)
